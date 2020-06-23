@@ -1,7 +1,7 @@
 <head>
 <style>
 pre code {
-  background-color: #eee;
+  background-color: DarkSlateGrey;
   border: 1px solid #999;
   display: block;
   padding: 10px;
