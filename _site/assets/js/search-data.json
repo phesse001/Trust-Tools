@@ -1,34 +1,88 @@
 {
   
   "0": {
-    "title": "test",
-    "content": "YOOOO .",
-    "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/TestChild.html",
-    "relUrl": "/Solutions/Docker/TestChild.html"
+    "title": "Create Your Own",
+    "content": ".",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/create_your_own.html",
+    "relUrl": "/Solutions/Docker/create_your_own.html"
   }
   ,"1": {
+    "title": "Create Your Own",
+    "content": ".",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/create_your_own.html",
+    "relUrl": "/Solutions/Popper/create_your_own.html"
+  }
+  ,"2": {
+    "title": "Create Your Own",
+    "content": ".",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/create_your_own.html",
+    "relUrl": "/Solutions/Script/create_your_own.html"
+  }
+  ,"3": {
+    "title": "Data",
+    "content": "",
+    "url": "http://localhost:4000/Trust-Tools/data.html",
+    "relUrl": "/data.html"
+  }
+  ,"4": {
+    "title": "Dependencies",
+    "content": "",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/dependencies.html",
+    "relUrl": "/Solutions/Docker/dependencies.html"
+  }
+  ,"5": {
+    "title": "Dependencies",
+    "content": "",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/dependencies.html",
+    "relUrl": "/Solutions/Script/dependencies.html"
+  }
+  ,"6": {
+    "title": "Dependencies",
+    "content": "",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/dependencies.html",
+    "relUrl": "/Solutions/Popper/dependencies.html"
+  }
+  ,"7": {
+    "title": "March Madness Example",
+    "content": "",
+    "url": "http://localhost:4000/Trust-Tools/example.html",
+    "relUrl": "/example.html"
+  }
+  ,"8": {
+    "title": "Home",
+    "content": "Trust Tools . The fundamental components of trustworthy computational results are transparency, reproducibility, and replicability. . Transparency: . All data and software used to produce a result are available with sufficient documentation. . Reproducibility: . Results can be computed by someone else using the author’s environment. . Replicablilty: . Consistent results can be obtained using another environment. . Outline . In order to make our results trustworthy, this webpage attempts to cover all three points discussed above. We provide different solutions to the problem of reporducibility, each with varying degrees of success. . For each solution we provide a brief overview and an outline all of the required dependencies and steps to get started. Even further, we provide generalized templates that anyone can take and modify for their own needs. . We then show how these different solutions can be used by applying them to a March Madness Rating system. All of the data and source code for the March Madness Rating System are referenced as well. .",
+    "url": "http://localhost:4000/Trust-Tools/",
+    "relUrl": "/"
+  }
+  ,"9": {
     "title": "Popper Solution",
     "content": "",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/",
     "relUrl": "/Solutions/Popper/"
   }
-  ,"2": {
-    "title": "Script Solution",
-    "content": ". Documentation for Trust Tools . March Madness Simulator . Each reproducible solution is applied to a sports ranking simulation based on the 1998 undergraduate thesis of Kenneth Massey. The application uses historical game data and linear algebra to predict the placement of teams in the NCAA basketball tournament. The application takes one parameter, the additional points added to teams playing away from home. The experiment will vary this parameter and assess its effect on the accuracy of the simulated team ranking. . To run the simulation, pull source code from Trust-Tools and compile. CMake can be used for compilation. After compiling the source code, ./March_Madness_Simulator # will produce a ranking with a value of # added to the score of teams not playing at home. . Script Workflow . The script workflow represents the simplest reproducibility workflow. This solution runs the March Madness simulator on the host machine and generates a paper with simulated results. To execute this experiment run ./script/run.sh. The following software packages must be installed before running the experiment. . git CMake install texlive-latex-recommended install texlive-publishers python3.6 . Docker Workflow . A Docker workflow alleviates potential dependency problems present in a script workflow. The following demonstrates running March Madness simulator Docker workflow and creating a reproducible workflow with Docker. . Run Docker Solution . Before executing this solution, install Docker. Up-to-date directions can be found on the Docker homepage. Next, navigate to docker directory in cloned Trust Tools repository. The image representing this experiment is built and executed with docker build . and docker run &lt;image_id&gt; respectively. Executing the image will produce a container with instructions for running simulation and generating paper. . Create Your Own . The environment of an experiment is described in a Dockerfile. Below is a template Dockerfile. . Dockerfile Example: . From Base Image RUN Install Dependecies CMD Terminal Commands . Popper Workflow . A Popper workflow builds upon a container workflow, like Docker. This solution allows for automated verification and validation testing. The following demonstrates running the March Madness simulator Popper workflow and creating a Popper compliant experiment. Run Popper Solution Popper must be installed before executing this workflow. Updated, system-specific installation information can be found on the Popper homepage. After installing Popper, navigate to popper directory in the cloned Trust Tools repository. Run the following command to execute the experiment; popper run -f wf.yml. This will execute all steps in wf.yml file. . Create Your Own . A Popper workflow enumerates each step of the experiment in a Ain’t Markup Language (YAML) file entitled wf.yml. Below is an example wf.yml file. . Popper wf.yml file Example: . steps: - uses: &lt;/Path/To/Container&gt; args: &#39;./Path/To/Script&#39; or - uses: &lt;/Path/To/Container&gt; runs: [&#39;./Path/To/Script&#39;,&#39;&#39;]&lt;/code&gt;&lt;/pre&gt; .",
-    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/",
-    "relUrl": "/Solutions/Script/"
-  }
-  ,"3": {
+  ,"10": {
     "title": "Docker Solution",
     "content": "",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/",
     "relUrl": "/Solutions/Docker/"
   }
-  ,"4": {
-    "title": "Main",
+  ,"11": {
+    "title": "Solutions",
     "content": "",
     "url": "http://localhost:4000/Trust-Tools/Solutions/",
     "relUrl": "/Solutions/"
+  }
+  ,"12": {
+    "title": "Script Solution",
+    "content": "",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/",
+    "relUrl": "/Solutions/Script/"
+  }
+  ,"13": {
+    "title": "Methods",
+    "content": "",
+    "url": "http://localhost:4000/Trust-Tools/methods.html",
+    "relUrl": "/methods.html"
   }
   
 }

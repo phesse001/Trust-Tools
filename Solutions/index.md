@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Main
-nav_order: 1
+title: Solutions
 has_children: true
+nav_order: 2
+has_toc: false
 ---
