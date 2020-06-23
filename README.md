@@ -1,3 +1,13 @@
+<head>
+<style>
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 10px;
+} 
+</style>
+</head>
 ## Documentation for Trust Tools
 ### March Madness Simulator
 
@@ -23,13 +33,12 @@ Before executing this solution, install Docker. Up-to-date directions can be fou
 ### Create Your Own
 The environment of an experiment is described in a Dockerfile. Below is a template Dockerfile.
 ### Dockerfile Example:
-```
-From <Base Image>
+<pre contenteditable="true" spellcheck= "false">
+<code>From <Base Image>
 
 RUN <Install Dependecies>    
 
-CMD <Terminal Commands>
-```
+CMD <Terminal Commands></code></pre>
 
 ### Popper Workflow
 A Popper workflow builds upon a container workflow, like Docker. This solution allows for automated verification and validation testing. The following demonstrates running the March Madness simulator Popper workflow and creating a Popper compliant experiment.
@@ -40,8 +49,8 @@ A Popper workflow enumerates each step of the experiment in a Ain't Markup Langu
 
 ### Popper ```wf.yml``` file Example:
 
-```
-steps:
+<pre contenteditable="true" spellcheck= "false">
+<code>steps:
 
 - uses: </Path/To/Container>
   args: './Path/To/Script'
@@ -49,6 +58,4 @@ steps:
   or
 
 - uses: </Path/To/Container>
-  runs: ['./Path/To/Script','<Argument>']
-
-```
+  runs: ['./Path/To/Script','<Argument>']</code></pre>
