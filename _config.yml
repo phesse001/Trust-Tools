@@ -50,10 +50,9 @@ color_scheme: dark
 theme: "just-the-docs"
 #theme: minima
 plugins:
-
-#fix for seo-tag
-gems:
+#fix for seo tag
 - jekyll-seo-tag
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
