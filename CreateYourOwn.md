@@ -1,3 +1,8 @@
+---
+layout: default
+title: Create Your Own
+nav_order: 2
+---
 <head>
 <style>
 pre code {
