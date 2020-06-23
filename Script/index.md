@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Create Your Own
-nav_order: 2
+title: Script Solution
+nav_order: 1
+has_children: true
 ---
 <head>
 <style>
 pre code {
-  background-color: DarkSlateGrey;
-  border: 1px solid #999;
   display: block;
   padding: 10px;
+  font-size: 12px;
 } 
 </style>
 </head>
@@ -39,18 +39,18 @@ Before executing this solution, install Docker. Up-to-date directions can be fou
 The environment of an experiment is described in a Dockerfile. Below is a template Dockerfile.
 ### Dockerfile Example:
 <pre contenteditable="true" spellcheck= "false">
-<code>From <Base Image>
+<code>From Base Image
 
-RUN <Install Dependecies>    
+RUN Install Dependecies   
 
-CMD <Terminal Commands></code></pre>
+CMD Terminal Commands</code></pre>
 
 ### Popper Workflow
 A Popper workflow builds upon a container workflow, like Docker. This solution allows for automated verification and validation testing. The following demonstrates running the March Madness simulator Popper workflow and creating a Popper compliant experiment.
 Run Popper Solution
-Popper must be installed before executing this workflow. Updated, system-specific installation information can be found on the  [Popper homepage](https://falsifiable.us/). After installing Popper, navigate to ```popper``` directory in the cloned Trust Tools repository. Run the following command to execute the experiment; ```popper run -f wf.yml```. This will execute all steps in ```wf.yml``` file.
+Popper must be installed before executing this workflow. Updated, system-specific installation information can be found on the  [Popper homepage](https://falsifiable.us/). After installing Popper, navigate to <code>popper</code> directory in the cloned Trust Tools repository. Run the following command to execute the experiment; <code>popper run -f wf.yml</code>. This will execute all steps in <code>wf.yml</code> file.
 ### Create Your Own
-A Popper workflow enumerates each step of the experiment in a Ain't Markup Language (YAML) file entitled ```wf.yml```. Below is an example ```wf.yml``` file.
+A Popper workflow enumerates each step of the experiment in a Ain't Markup Language (YAML) file entitled <code>wf.yml</code>. Below is an example <code>wf.yml</code> file.
 
 ### Popper ```wf.yml``` file Example:
 

@@ -46,7 +46,7 @@ heading_anchors: true
 color_scheme: dark
 
 # Build settings
-remote_theme: pmarsceill/just-the-docs
+#remote_theme: pmarsceill/just-the-docs
 theme: "just-the-docs"
 #theme: minima
 plugins:
