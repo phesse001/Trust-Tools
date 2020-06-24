@@ -2,10 +2,9 @@
 layout: default
 title: Create Your Own
 parent: Popper Solution
-grand_parent: Solutions
-nav_order: 3
+grand_parent: Home
+nav_order: 9
 ---
-<head>
 <style>
 pre code {
   display: block;
@@ -13,4 +12,3 @@ pre code {
   font-size: 12px;
 } 
 </style>
-</head>

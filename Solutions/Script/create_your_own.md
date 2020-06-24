@@ -2,7 +2,7 @@
 layout: default
 title: Create Your Own
 parent: Script Solution
-grand_parent: Solutions
+grand_parent: Home
 nav_order: 3
 ---
 <head>

@@ -2,8 +2,8 @@
 layout: default
 title: Create Your Own
 parent: Docker Solution
-grand_parent: Solutions
-nav_order: 3
+grand_parent: Home
+nav_order: 6
 ---
 <head>
 <style>
