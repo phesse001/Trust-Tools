@@ -3,7 +3,7 @@ layout: default
 title: Home
 nav_order: 1
 has_toc: false
-permalink: :path
+permalink: /:basename
 has_children: true
 ---
 # Trust Tools
