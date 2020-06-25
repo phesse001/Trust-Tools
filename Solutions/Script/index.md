@@ -30,4 +30,3 @@ A script solution typically is just a file directory containing multiple scripts
 There are a variety of different scripts that accomplish different parts of the experiment. For example, <code>madness.sh</code> runs the experiment and <code>paper.sh</code> generates a paper with the results of the experiment. The <code>run.sh</code> will run both of these and use the other files in the directory as arguments.
 
 This solution suffers from potential code rot and dependency issues. This is due to all the scripts being written on a particular machine and the experiment depends on the specific versions of sofware packages, which could cause compatibility issues in the future if the packages become deprecated.
-

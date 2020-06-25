@@ -36,3 +36,39 @@ Once Docker is installed an [image](https://jfrog.com/knowledge-base/a-beginners
 To see that your image was successfully created you can run <code>docker images</code> to list all the images on your machine. To run an image, call <code>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</code>.
 
 For more information on how to use docker, visit [Docker's Documentation Page](https://docs.docker.com/).
+
+## Installation
+* *All information found here came from (Docker Documentation Page)[https://docs.docker.com/]* <a href= "/Trust-Tools/references.html">[4]</a>
+
+__Mac__
+
+Requirements
+* Mac hardware must be a 2010 or a newer model
+* macOS must be version 10.13 or newer
+* At least 4 GB of RAM
+* VirtualBox prior to version 4.3.30 must not be installed as it is not compatible with Docker Desktop
+
+Go to [DockerHub](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) and click Get Docker
+
+Then double-click Docker.dmg to start the installation.
+
+To verify Docker installed correctly, open up a terminal and run <code>docker version</code>
+
+__Windows__
+
+Requirements
+* Windows 10, version 2004 or higher
+* WSL 2 feature on Windows
+* 64 bit processor
+* 4GB system RAM
+* BIOS-level hardware virtualization support must be enabled in the BIOS settings
+
+Go to [DockerHub](https://hub.docker.com/editions/community/docker-ce-desktop-windows/) and click Get Docker
+
+Then double-click <code>Docker for Windows Installer</code>
+
+To verify Docker installed correctly, open up a terminal and run <code>docker version</code>
+
+__Ubuntu__
+
+There are many more steps required to install on Ubuntu. To install on Ubuntu, visit [here](https://docs.docker.com/engine/install/ubuntu/)

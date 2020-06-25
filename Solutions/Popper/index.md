@@ -42,3 +42,14 @@ pre code {
 As you can see there are a lot of attributes that go into a <code>wf.yml</code> file.
 
  To learn more information about Popper and the configuration options for the <code>wf.yml</code> file, visit Popper's documentation page [here](https://popper.readthedocs.io/en/latest/index.html).
+## Installation
+
+To get started with Popper, you will first need to have Docker installed. Visit the [Docker Overview Page](/Trust-Tools/Solutions/Docker/) to get docker installed.
+
+Popper provides a pip package for installation. To be sure pip will work, it is recommended to use a virtual environment. The following outlines steps for a linux system, but the same can be achieved for windows and mac.
+<pre><code>mkdir ./virtualenvs
+apt-get install virtualenvs
+source ./virtualenvs/popper/bin/activate
+pip install popper</code></pre>
+
+To verify the installation worked, run <code>popper scaffold</code>. This will download an example popper workflow. You can then run this workflow with <code>popper run -f wf.yml</code>.
