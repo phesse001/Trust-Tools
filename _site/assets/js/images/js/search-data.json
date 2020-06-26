@@ -8,13 +8,13 @@
   }
   ,"1": {
     "title": "Create Your Own",
-    "content": "&lt;table width=100% height=100%&gt; &lt;tr&gt;&lt;td width=50%&gt; &lt;h2&gt;Dockerfile.txt Template&lt;/h2&gt; From . RUN . CMD &lt;/textarea&gt; Download &lt;h2&gt;March Madness Simulation Dockerfile.txt&lt;/h2&gt; Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;iframe src=&quot;https://docs.docker.com/develop/develop-images/dockerfile_best-practices/&quot;&gt; &lt;/iframe&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
+    "content": "&lt;table width=100% height=100%&gt; &lt;tr&gt;&lt;td width=50%&gt; &lt;h2&gt;Dockerfile.txt Template&lt;/h2&gt; From . RUN . CMD &lt;/textarea&gt; Download &lt;h2&gt;March Madness Simulation Dockerfile.txt&lt;/h2&gt; #(1) Pull parent image. From ubuntu:18.04 . (2) Set environment variables. . ENV DEBIAN_FRONTEND=noninteractive . (3) Download software dependencies. . RUN yes| apt-get update &amp;&amp; yes| apt-get install g++ &amp;&amp; yes | apt-get install git &amp;&amp; yes | apt-get install texlive-latex-recommended &amp;&amp; yes | apt-get install texlive-publishers &amp;&amp; yes | apt-get install python3.6 . (4) Copy scripts into image . COPY ./scripts/run.sh / COPY ./scripts/madness.sh / COPY ./scripts/paper.sh / COPY ./scripts/table.py / COPY ./scripts/correct.txt / COPY ./scripts/SOTF.tex / COPY ./scripts/SOTF.bib / . (5) Run entrypoint script. . CMD ./run.sh&lt;/textarea&gt; Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;iframe src=&quot;https://docs.docker.com/develop/develop-images/dockerfile_best-practices/&quot;&gt; &lt;/iframe&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/create_your_own_docker.html",
     "relUrl": "/Solutions/Docker/create_your_own_docker.html"
   }
   ,"2": {
     "title": "Create Your Own",
-    "content": "&lt;table width=100% height=100%&gt; . &lt;td width=50%&gt; wf.yml Template . steps: - uses: &lt;/Path/To/Container&gt; args: &#39;./Path/To/Script&#39; or - uses: &lt;/Path/To/Container&gt; runs: [&#39;./Path/To/Script&#39;,&#39;&#39;]&lt;/textarea&gt; Download March Madness Simulation wf.yml . Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
+    "content": "&lt;table width=100% height=100%&gt; . &lt;td width=50%&gt; wf.yml Template . steps: - uses: &lt;/Path/To/Container&gt; args: &#39;./Path/To/Script&#39; or - uses: &lt;/Path/To/Container&gt; runs: [&#39;./Path/To/Script&#39;,&#39;&#39;]&lt;/textarea&gt; Download March Madness Simulation wf.yml . # (0) Start of file steps: # (1) Run March Madness Application - uses: &#39;./container&#39; runs: &#39;./scripts/madness.sh&#39; # (3) Create LaTeX Table with results - uses: docker://python:3 runs: [&#39;./scripts/table.py&#39;,&#39;./scripts/correct.txt&#39;,&#39;./madness/output_no_advantage.txt&#39;, &#39;./madness/output_2_advantage.txt&#39;,&#39;./madness/output_4_advantage.txt&#39;,&#39;./docker_table.tex&#39;,&#39;12&#39;] - uses: docker://python:3 runs: [&#39;./scripts/table.py&#39;,&#39;./scripts/correct.txt&#39;,&#39;./madness/output_no_advantage.txt&#39;, &#39;./madness/output_2_advantage.txt&#39;,&#39;./madness/output_4_advantage.txt&#39;,&#39;./popper_table.tex&#39;,&#39;12&#39;] # (4) Compile Latex files into pdf - uses: &#39;./container&#39; runs: &#39;./paper.sh&#39; # (5) Remove March Madness Application from host machine - uses: &#39;./container&#39; args: [&#39;rm&#39;, &#39;-r&#39;, &#39;madness&#39;] Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/create_your_own_popper.html",
     "relUrl": "/Solutions/Popper/create_your_own_popper.html"
   }
@@ -25,10 +25,10 @@
     "relUrl": "/data.html"
   }
   ,"4": {
-    "title": "Docker",
-    "content": "",
-    "url": "http://localhost:4000/Trust-Tools/march_madness/docker.html",
-    "relUrl": "/march_madness/docker.html"
+    "title": "Script Solution",
+    "content": "Overview . This solution uses a culmination of scripts to automate installing all the dependencies, running the experiment, and genererating an output file with the results from the experiment. The general idea is to automate all tasks involved in an experiement, making it possible to get results by running a single script. . A script solution typically is just a file directory containing multiple scripts, with one script being used to orchestrate the entire experiment. Here is an example of what a script solution may look like: . ├── SOTF.bib . ├── SOTF.tex . ├── correct.txt . ├── madness.sh . ├── paper.sh . ├── run.sh . └── table.py . There are a variety of different scripts that accomplish different parts of the experiment. For example, madness.sh runs the experiment and paper.sh generates a paper with the results of the experiment. The run.sh will run both of these and use the other files in the directory as arguments. . This solution suffers from potential code rot and dependency issues. This is due to all the scripts being written on a particular machine and the experiment depends on the specific versions of sofware packages, which could cause compatibility issues in the future if the packages become deprecated. .",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/",
+    "relUrl": "/Solutions/Script/"
   }
   ,"5": {
     "title": "Popper Solution",
@@ -38,7 +38,7 @@
   }
   ,"6": {
     "title": "March Madness Example",
-    "content": "",
+    "content": "Reproducible Workflows Applied to March Madness Simulation . The following is a paper overviewing solutions to the problem of reproducibility. This paper also contains information on applying the script, Docker, and Popper reproducible workflows to an existing March Madness simulation. . If you navigate to the table of contents at the top of the page, you will see all sections of the paper listed. The ones we are concerned with here are V, VII, and IX. Clicking on each of these will bring you to the section of the paper that talks about how we applied the given workflow to the existing project . You can also find the paper Here on GitHub. .",
     "url": "http://localhost:4000/Trust-Tools/march_madness/",
     "relUrl": "/march_madness/"
   }
@@ -55,28 +55,10 @@
     "relUrl": "/index"
   }
   ,"9": {
-    "title": "Script Solution",
-    "content": "Overview . This solution uses a culmination of scripts to automate installing all the dependencies, running the experiment, and genererating an output file with the results from the experiment. The general idea is to automate all tasks involved in an experiement, making it possible to get results by running a single script. . A script solution typically is just a file directory containing multiple scripts, with one script being used to orchestrate the entire experiment. Here is an example of what a script solution may look like: . ├── SOTF.bib . ├── SOTF.tex . ├── correct.txt . ├── madness.sh . ├── paper.sh . ├── run.sh . └── table.py . There are a variety of different scripts that accomplish different parts of the experiment. For example, madness.sh runs the experiment and paper.sh generates a paper with the results of the experiment. The run.sh will run both of these and use the other files in the directory as arguments. . This solution suffers from potential code rot and dependency issues. This is due to all the scripts being written on a particular machine and the experiment depends on the specific versions of sofware packages, which could cause compatibility issues in the future if the packages become deprecated. .",
-    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/",
-    "relUrl": "/Solutions/Script/"
-  }
-  ,"10": {
-    "title": "Popper",
-    "content": "",
-    "url": "http://localhost:4000/Trust-Tools/march_madness/popper.html",
-    "relUrl": "/march_madness/popper.html"
-  }
-  ,"11": {
     "title": "References",
     "content": "References . [1] GeeksforGeeks. 2020. Differences Between Verification And Validation - Geeksforgeeks. [online] Available at: https://www.geeksforgeeks.org/differences-between-verification-and-validation/ [Accessed 24 June 2020]. . [2] Osei-Bonsu, W., 2020. An Analysis Of The Reproducible Workflows. [online] Available at: https://github.com/betterscientificsoftware/Trust-Tools/blob/master/SOTF.pdf [Accessed 24 June 2020]. . [3] Jimenez, I., 2020. Popper — Popper 2.X Documentation. [online] Popper.readthedocs.io. Available at: https://popper.readthedocs.io/en/latest/index.html [Accessed 24 June 2020]. . [4] Docker Documentation, 17-Jun-2020. [Online]. Available: https://docs.docker.com/. [Accessed: 25-Jun-2020]. .",
     "url": "http://localhost:4000/Trust-Tools/references.html",
     "relUrl": "/references.html"
-  }
-  ,"12": {
-    "title": "Script",
-    "content": "",
-    "url": "http://localhost:4000/Trust-Tools/march_madness/script.html",
-    "relUrl": "/march_madness/script.html"
   }
   
 }
