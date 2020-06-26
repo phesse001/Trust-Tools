@@ -2,21 +2,21 @@
   
   "0": {
     "title": "Create Your Own",
-    "content": ".",
+    "content": "",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Script/create_your_own.html",
     "relUrl": "/Solutions/Script/create_your_own.html"
   }
   ,"1": {
     "title": "Create Your Own",
-    "content": "",
-    "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/create_your_own.html",
-    "relUrl": "/Solutions/Popper/create_your_own.html"
+    "content": "&lt;textarea&gt;From &lt;Base Image&gt; . RUN . CMD &lt;/textarea&gt; Download Go Back .",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/create_your_own_docker.html",
+    "relUrl": "/Solutions/Docker/create_your_own_docker.html"
   }
   ,"2": {
     "title": "Create Your Own",
-    "content": ".",
-    "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/create_your_own.html",
-    "relUrl": "/Solutions/Docker/create_your_own.html"
+    "content": "&lt;textarea&gt;steps: . uses: &lt;/Path/To/Container&gt; args: ‘./Path/To/Script’ . or . | uses: &lt;/Path/To/Container&gt; runs: [’./Path/To/Script’,’&#39;]&lt;/textarea&gt; Download Go Back . | .",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/create_your_own_popper.html",
+    "relUrl": "/Solutions/Popper/create_your_own_popper.html"
   }
   ,"3": {
     "title": "Data",

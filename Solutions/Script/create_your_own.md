@@ -5,7 +5,6 @@ parent: Script Solution
 grand_parent: Home
 nav_order: 3
 ---
-<head>
 <style>
 pre code {
   display: block;
@@ -13,4 +12,3 @@ pre code {
   font-size: 12px;
 } 
 </style>
-</head>
