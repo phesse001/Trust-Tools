@@ -8,7 +8,7 @@
   }
   ,"1": {
     "title": "Create Your Own",
-    "content": "&lt;table width=100% height=100%&gt; &lt;tr&gt;&lt;td width=50%&gt; &lt;h2&gt;Dockerfile.txt Template&lt;/h2&gt; From . RUN . CMD &lt;/textarea&gt; Download &lt;h2&gt;March Madness Simulation Dockerfile.txt&lt;/h2&gt; Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;iframe src=&quot;https://docs.docker.com/develop/develop-images/dockerfile_best-practices/&quot; width=&quot;1100&quot; height=&quot;900&quot; display=&quot;block&quot;&gt; &lt;/iframe&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
+    "content": "&lt;table width=100% height=100%&gt; &lt;tr&gt;&lt;td width=50%&gt; &lt;h2&gt;Dockerfile.txt Template&lt;/h2&gt; From . RUN . CMD &lt;/textarea&gt; Download &lt;h2&gt;March Madness Simulation Dockerfile.txt&lt;/h2&gt; Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;iframe src=&quot;https://docs.docker.com/develop/develop-images/dockerfile_best-practices/&quot;&gt; &lt;/iframe&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/create_your_own_docker.html",
     "relUrl": "/Solutions/Docker/create_your_own_docker.html"
   }
