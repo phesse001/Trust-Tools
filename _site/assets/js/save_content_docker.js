@@ -9,8 +9,15 @@ const downloadToFile = (content, filename, contentType) => {
     URL.revokeObjectURL(a.href);
   };
   
-  document.querySelector('#btnSave').addEventListener('click', () => {
-    const textArea = document.querySelector('textarea');
+  document.querySelector('#btnSave1').addEventListener('click', () => {
+    const textArea = document.querySelectorAll('textarea').item(0);
+    
+    downloadToFile(textArea.value, 'Dockerfile.txt', 'text/plain');
+
+  });
+
+  document.querySelector('#btnSave2').addEventListener('click', () => {
+    const textArea = document.querySelectorAll('textarea').item(1);
     
     downloadToFile(textArea.value, 'Dockerfile.txt', 'text/plain');
 

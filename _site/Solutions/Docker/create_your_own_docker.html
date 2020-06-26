@@ -1,27 +1,44 @@
 <style>
-body{
-background-color: #27262B
+  body{
+background-color: #27262B;
+font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
 }
-</style>
-
-<style>
     textarea {
       background-color: #36343B;
       border: 1px solid #999;
       display: block;
       padding: 10px;
-      width: 900px;
-      height: 500px;
-      color: #FFFFFF
+      width: 650px;
+      height: 350px;
+      color: #FFFFFF;
+      resize: none; 
     } 
+    h2{
+      color:white
+    }
     </style>
-    <textarea>From <Base Image>
 
-RUN <Install Dependecies>    
-              
-CMD <Terminal Commands></textarea>
-    <br>
-    <button id="btnSave">Download</button>
-    <br><br>
-    <a href="/Trust-Tools/index" style="color:white">Go Back</a>
-  <script src="/Trust-Tools/assets/js/save_content_docker.js"></script>
+  <table width=100% height=100%>
+    <tr><td width=50%>
+      <h2>Dockerfile.txt Template</h2>
+      <textarea>From <Base Image>
+  
+  RUN <Install Dependecies>    
+                
+  CMD <Terminal Commands></textarea>
+      <br>
+      <button id="btnSave1">Download</button>
+      <br><br>
+      <h2>March Madness Simulation Dockerfile.txt</h2>
+      <textarea></textarea>
+      <br>
+      <button id="btnSave2">Download</button>
+      <br><br>
+        <a href="/Trust-Tools/index" style="color:white">Go Back</a>
+        <script src="/Trust-Tools/assets/js/save_content_docker.js"></script>
+  </td><td width=50%>
+    <iframe src="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/" width="1100" height="900" display="block">
+    </iframe>
+  </td></tr></table>
+
+  

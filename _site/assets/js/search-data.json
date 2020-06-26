@@ -8,13 +8,13 @@
   }
   ,"1": {
     "title": "Create Your Own",
-    "content": "&lt;textarea&gt;From &lt;Base Image&gt; . RUN . CMD &lt;/textarea&gt; Download Go Back .",
+    "content": "&lt;table width=100% height=100%&gt; &lt;tr&gt;&lt;td width=50%&gt; &lt;h2&gt;Dockerfile.txt Template&lt;/h2&gt; From . RUN . CMD &lt;/textarea&gt; Download &lt;h2&gt;March Madness Simulation Dockerfile.txt&lt;/h2&gt; Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;iframe src=&quot;https://docs.docker.com/develop/develop-images/dockerfile_best-practices/&quot; width=&quot;1100&quot; height=&quot;900&quot; display=&quot;block&quot;&gt; &lt;/iframe&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/create_your_own_docker.html",
     "relUrl": "/Solutions/Docker/create_your_own_docker.html"
   }
   ,"2": {
     "title": "Create Your Own",
-    "content": "&lt;textarea&gt;steps: . uses: &lt;/Path/To/Container&gt; args: ‘./Path/To/Script’ . or . | uses: &lt;/Path/To/Container&gt; runs: [’./Path/To/Script’,’&#39;]&lt;/textarea&gt; Download Go Back . | .",
+    "content": "&lt;table width=100% height=100%&gt; . &lt;td width=50%&gt; wf.yml Template . steps: - uses: &lt;/Path/To/Container&gt; args: &#39;./Path/To/Script&#39; or - uses: &lt;/Path/To/Container&gt; runs: [&#39;./Path/To/Script&#39;,&#39;&#39;]&lt;/textarea&gt; Download March Madness Simulation wf.yml . Download Go Back &lt;/td&gt;&lt;td width=50%&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; .",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/create_your_own_popper.html",
     "relUrl": "/Solutions/Popper/create_your_own_popper.html"
   }
@@ -31,10 +31,10 @@
     "relUrl": "/march_madness/docker.html"
   }
   ,"5": {
-    "title": "Home",
-    "content": "Trust Tools . The fundamental components of trustworthy computational results are transparency, reproducibility, and replicability. . Transparency: . All data and software used to produce a result are available with sufficient documentation. . Reproducibility: . Results can be computed by someone else using the author’s environment. . Replicablilty: . Consistent results can be obtained using another environment. . Outline . In order to make our results trustworthy, this webpage attempts to cover all three points discussed above. We provide different solutions to the problem of reporducibility, each with varying degrees of success. . For each solution we provide a brief overview and an outline all of the required dependencies and steps to get started. Even further, we provide generalized templates that anyone can take and modify for their own needs. . We then show how these different solutions can be used by applying them to a March Madness Rating system. All of the data and source code for the March Madness Rating System are referenced as well. .",
-    "url": "http://localhost:4000/Trust-Tools/index",
-    "relUrl": "/index"
+    "title": "Popper Solution",
+    "content": "Overview . While Docker has many advantages over the script solution, there are still areas where it is lacking. Mainly, it lacks the inclusion of verification and validation. Verification is the process of checking that software achieves a given task without bugs. This usually boils down to static testing. Validation checks whether software fulfills given requirements by testing inputs and analyzing ouputs [1]. . Popper provides a common framework for describing all dependencies and artifacts for a given experiment. An experiment is Popperized” if it contains the following [2]: . Experimental code | Experiment orchestration code | References to data dependencies | Experiment parameters | Validation criteria and results | . Popper is very similar to Docker, but defines a workflow and enumerates the steps of running an experiment in an wf.yml file. Along with laying out the steps to run the experiment, popper can handle experimental logic with a travis.yml file containing a list of tests. . The basis of Popper is the wf.yml file. Here is the general structure a wf.ym may have [3]: . steps: # download CSV file with data on global CO2 emissions - id: download uses: docker://byrnedo/alpine-curl:0.1.8 args: [-LO, https://github.com/datasets/co2-fossil-global/raw/master/global.csv] # obtain the transpose of the global CO2 emissions table - id: get-transpose uses: docker://getpopper/csvtool:2.4 args: [transpose, global.csv, -o, global_transposed.csv] . As you can see there are a lot of attributes that go into a wf.yml file. . To learn more information about Popper and the configuration options for the wf.yml file, visit Popper’s documentation page here. . Installation . To get started with Popper, you will first need to have Docker installed. Visit the Docker Overview Page to get docker installed. . Popper provides a pip package for installation. To be sure pip will work, it is recommended to use a virtual environment. The following outlines steps for a linux system, but the same can be achieved for windows and mac. . mkdir ./virtualenvs apt-get install virtualenvs source ./virtualenvs/popper/bin/activate pip install popper . To verify the installation worked, run popper scaffold. This will download an example popper workflow. You can then run this workflow with popper run -f wf.yml. .",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/",
+    "relUrl": "/Solutions/Popper/"
   }
   ,"6": {
     "title": "March Madness Example",
@@ -43,42 +43,36 @@
     "relUrl": "/march_madness/"
   }
   ,"7": {
-    "title": "Script Solution",
-    "content": "Overview . This solution uses a culmination of scripts to automate installing all the dependencies, running the experiment, and genererating an output file with the results from the experiment. The general idea is to automate all tasks involved in an experiement, making it possible to get results by running a single script. . A script solution typically is just a file directory containing multiple scripts, with one script being used to orchestrate the entire experiment. Here is an example of what a script solution may look like: . ├── SOTF.bib . ├── SOTF.tex . ├── correct.txt . ├── madness.sh . ├── paper.sh . ├── run.sh . └── table.py . There are a variety of different scripts that accomplish different parts of the experiment. For example, madness.sh runs the experiment and paper.sh generates a paper with the results of the experiment. The run.sh will run both of these and use the other files in the directory as arguments. . This solution suffers from potential code rot and dependency issues. This is due to all the scripts being written on a particular machine and the experiment depends on the specific versions of sofware packages, which could cause compatibility issues in the future if the packages become deprecated. .",
-    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/",
-    "relUrl": "/Solutions/Script/"
-  }
-  ,"8": {
-    "title": "Popper Solution",
-    "content": "Overview . While Docker has many advantages over the script solution, there are still areas where it is lacking. Mainly, it lacks the inclusion of verification and validation. Verification is the process of checking that software achieves a given task without bugs. This usually boils down to static testing. Validation checks whether software fulfills given requirements by testing inputs and analyzing ouputs [1]. . Popper provides a common framework for describing all dependencies and artifacts for a given experiment. An experiment is Popperized” if it contains the following [2]: . Experimental code | Experiment orchestration code | References to data dependencies | Experiment parameters | Validation criteria and results | . Popper is very similar to Docker, but defines a workflow and enumerates the steps of running an experiment in an wf.yml file. Along with laying out the steps to run the experiment, popper can handle experimental logic with a travis.yml file containing a list of tests. . The basis of Popper is the wf.yml file. Here is the general structure a wf.ym may have [3]: . steps: # download CSV file with data on global CO2 emissions - id: download uses: docker://byrnedo/alpine-curl:0.1.8 args: [-LO, https://github.com/datasets/co2-fossil-global/raw/master/global.csv] # obtain the transpose of the global CO2 emissions table - id: get-transpose uses: docker://getpopper/csvtool:2.4 args: [transpose, global.csv, -o, global_transposed.csv] . As you can see there are a lot of attributes that go into a wf.yml file. . To learn more information about Popper and the configuration options for the wf.yml file, visit Popper’s documentation page here. . Installation . To get started with Popper, you will first need to have Docker installed. Visit the Docker Overview Page to get docker installed. . Popper provides a pip package for installation. To be sure pip will work, it is recommended to use a virtual environment. The following outlines steps for a linux system, but the same can be achieved for windows and mac. . mkdir ./virtualenvs apt-get install virtualenvs source ./virtualenvs/popper/bin/activate pip install popper . To verify the installation worked, run popper scaffold. This will download an example popper workflow. You can then run this workflow with popper run -f wf.yml. .",
-    "url": "http://localhost:4000/Trust-Tools/Solutions/Popper/",
-    "relUrl": "/Solutions/Popper/"
-  }
-  ,"9": {
     "title": "Docker Solution",
     "content": ". Overview . Software containters provide a way of capturing a specific environment in an executable file system. This comes with many advantages over the script solution. . You no longer have to worry about the issue of code rot, as the environment you programmed in and software packages will always be the same. Containers are also portable, allowing you to publish your experiment for others to run and build upon. . . Docker is the leading software used to encapsulate environment variables. Docker can be installed on Mac, Linux, and Windows with Hyper-V. . Once Docker is installed an image can be created from a Dockerfile or pulled from DockerHub. An image defines your environment and can be modified to have any software packages you need and run specified scripts. . To see that your image was successfully created you can run docker images to list all the images on your machine. To run an image, call docker run [OPTIONS] IMAGE [COMMAND] [ARG...]. . For more information on how to use docker, visit Docker’s Documentation Page. . Installation . All information found here came from (Docker Documentation Page)[https://docs.docker.com/] [4] | . Mac . Requirements . Mac hardware must be a 2010 or a newer model | macOS must be version 10.13 or newer | At least 4 GB of RAM | VirtualBox prior to version 4.3.30 must not be installed as it is not compatible with Docker Desktop | . Go to DockerHub and click Get Docker . Then double-click Docker.dmg to start the installation. . To verify Docker installed correctly, open up a terminal and run docker version . Windows . Requirements . Windows 10, version 2004 or higher | WSL 2 feature on Windows | 64 bit processor | 4GB system RAM | BIOS-level hardware virtualization support must be enabled in the BIOS settings | . Go to DockerHub and click Get Docker . Then double-click Docker for Windows Installer . To verify Docker installed correctly, open up a terminal and run docker version . Ubuntu . There are many more steps required to install on Ubuntu. To install on Ubuntu, visit here .",
     "url": "http://localhost:4000/Trust-Tools/Solutions/Docker/",
     "relUrl": "/Solutions/Docker/"
   }
-  ,"10": {
-    "title": "Methods",
-    "content": "",
-    "url": "http://localhost:4000/Trust-Tools/methods.html",
-    "relUrl": "/methods.html"
+  ,"8": {
+    "title": "Home",
+    "content": "Trust Tools . The fundamental components of trustworthy computational results are transparency, reproducibility, and replicability. . Transparency: . All data and software used to produce a result are available with sufficient documentation. . Reproducibility: . Results can be computed by someone else using the author’s environment. . Replicablilty: . Consistent results can be obtained using another environment. . Outline . In order to make our results trustworthy, this webpage attempts to cover all three points discussed above. We provide different solutions to the problem of reporducibility, each with varying degrees of success. . For each solution we provide a brief overview and an outline all of the required dependencies and steps to get started. Even further, we provide generalized templates that anyone can take and modify for their own needs. . We then show how these different solutions can be used by applying them to a March Madness Rating system. All of the data and source code for the March Madness Rating System are referenced as well. .",
+    "url": "http://localhost:4000/Trust-Tools/index",
+    "relUrl": "/index"
   }
-  ,"11": {
+  ,"9": {
+    "title": "Script Solution",
+    "content": "Overview . This solution uses a culmination of scripts to automate installing all the dependencies, running the experiment, and genererating an output file with the results from the experiment. The general idea is to automate all tasks involved in an experiement, making it possible to get results by running a single script. . A script solution typically is just a file directory containing multiple scripts, with one script being used to orchestrate the entire experiment. Here is an example of what a script solution may look like: . ├── SOTF.bib . ├── SOTF.tex . ├── correct.txt . ├── madness.sh . ├── paper.sh . ├── run.sh . └── table.py . There are a variety of different scripts that accomplish different parts of the experiment. For example, madness.sh runs the experiment and paper.sh generates a paper with the results of the experiment. The run.sh will run both of these and use the other files in the directory as arguments. . This solution suffers from potential code rot and dependency issues. This is due to all the scripts being written on a particular machine and the experiment depends on the specific versions of sofware packages, which could cause compatibility issues in the future if the packages become deprecated. .",
+    "url": "http://localhost:4000/Trust-Tools/Solutions/Script/",
+    "relUrl": "/Solutions/Script/"
+  }
+  ,"10": {
     "title": "Popper",
     "content": "",
     "url": "http://localhost:4000/Trust-Tools/march_madness/popper.html",
     "relUrl": "/march_madness/popper.html"
   }
-  ,"12": {
+  ,"11": {
     "title": "References",
     "content": "References . [1] GeeksforGeeks. 2020. Differences Between Verification And Validation - Geeksforgeeks. [online] Available at: https://www.geeksforgeeks.org/differences-between-verification-and-validation/ [Accessed 24 June 2020]. . [2] Osei-Bonsu, W., 2020. An Analysis Of The Reproducible Workflows. [online] Available at: https://github.com/betterscientificsoftware/Trust-Tools/blob/master/SOTF.pdf [Accessed 24 June 2020]. . [3] Jimenez, I., 2020. Popper — Popper 2.X Documentation. [online] Popper.readthedocs.io. Available at: https://popper.readthedocs.io/en/latest/index.html [Accessed 24 June 2020]. . [4] Docker Documentation, 17-Jun-2020. [Online]. Available: https://docs.docker.com/. [Accessed: 25-Jun-2020]. .",
     "url": "http://localhost:4000/Trust-Tools/references.html",
     "relUrl": "/references.html"
   }
-  ,"13": {
+  ,"12": {
     "title": "Script",
     "content": "",
     "url": "http://localhost:4000/Trust-Tools/march_madness/script.html",
