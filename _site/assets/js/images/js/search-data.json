@@ -38,7 +38,7 @@
   }
   ,"6": {
     "title": "March Madness Example",
-    "content": "Reproducible Workflows Applied to March Madness Simulation . The following is a paper overviewing solutions to the problem of reproducibility. This paper also contains information on applying the script, Docker, and Popper reproducible workflows to an existing March Madness simulation. . If you navigate to the table of contents at the top of the page, you will see all sections of the paper listed. The ones we are concerned with here are V, VII, and IX. Clicking on each of these will bring you to the section of the paper that talks about how we applied the given workflow to the existing project . You can also find the paper Here on GitHub. .",
+    "content": "Reproducible Workflows Applied to March Madness Simulation . The following is a paper overviewing solutions to the problem of reproducibility. This paper also contains information on applying the script, Docker, and Popper reproducible workflows to an existing March Madness simulation. . If you navigate to the table of contents at the top of the page, you will see all sections of the paper listed. The ones we are concerned with here are V,VII, and IX. Clicking on each of these will bring you to the section of the paper that talks about how we applied the given workflow to the existing project . You can also find the paper Here on GitHub. .",
     "url": "http://localhost:4000/Trust-Tools/march_madness/",
     "relUrl": "/march_madness/"
   }
