@@ -10,5 +10,5 @@ The following is a paper overviewing solutions to the problem of reproducibility
 If you navigate to the table of contents at the top of the page, you will see all sections of the paper listed. The ones we are concerned with here are __V__, __VII__, and __IX__. Clicking on each of these will bring you to the section of the paper that talks about how we applied the given workflow to the existing project
 
 You can also find the paper [Here](https://github.com/betterscientificsoftware/Trust-Tools/blob/master/SOTF.pdf) on GitHub.
-<iframe src= "/Trust-Tools/assets/pdf/SOTF.pdf/" style="width:830px; height:1000px;" ></iframe>
+<iframe src= "https://github.com/betterscientificsoftware/Trust-Tools/blob/master/SOTF.pdf" style="width:830px; height:1000px;" ></iframe>
 
