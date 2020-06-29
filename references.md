@@ -15,3 +15,6 @@ Jimenez, I., 2020. Popper — Popper 2.X Documentation. [online] Popper.readthed
 
 <a id="4">[4]</a> 
 Docker Documentation, 17-Jun-2020. [Online]. Available: https://docs.docker.com/. [Accessed: 25-Jun-2020].
+
+<a id="5">[5]</a> 
+Massey, K., 2020. Massey Ratings - Sports Computer Ratings, Scores, And Analysis. [online] Masseyratings.com. Available at: <https://www.masseyratings.com/> [Accessed 29 June 2020].

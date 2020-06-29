@@ -5,7 +5,7 @@ nav_order: 3
 ---
 ## Data
 ### Source
-All of the data used in this experiment was sourced from [masseyratings.com](). The data can be found by navigating to the data section, which will bring up a list of different sports and the years their season's were played in. The data used in this experiment came from
+All of the data used in this experiment was sourced from [masseyratings.com]()<a href= "/Trust-Tools/references.html">[5]</a> . The data can be found by navigating to the data section, which will bring up a list of different sports and the years their season's were played in. The data used in this experiment came from
 
 ![](/Trust-Tools/assets/images/college_basketball.PNG?raw=true)
 

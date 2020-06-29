@@ -39,7 +39,7 @@ pre code {
   args: [transpose, global.csv, -o, global_transposed.csv]
 </code></pre>
 
-As you can see there are a lot of attributes that go into a <code>wf.yml</code> file.
+The structure of the <code>wf.yml</code> is just a basic list of steps. However, there are many attributes that can go into each of the different steps an experiment may have.
 
  To learn more information about Popper and the configuration options for the <code>wf.yml</code> file, visit Popper's documentation page [here](https://popper.readthedocs.io/en/latest/index.html).
 ## Installation
