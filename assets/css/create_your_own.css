@@ -1,0 +1,22 @@
+        body{
+            background-color: #27262B;
+            font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+        }
+        textarea{
+          background-color: #36343B;
+          border: 1px solid #999;
+          display: block;
+          padding: 10px;
+          width: 80%;
+          height: 37%;
+          color: #FFFFFF;
+          resize: none;
+        } 
+        h2{
+          color:white
+        }
+        iframe{
+          overflow: auto;
+          width: 100%;
+          height: 100%;
+        }

@@ -4,34 +4,10 @@ parent: Docker Solution
 grand_parent: Home
 nav_order: 7
 ---
-<style>
-  body{
-background-color: #27262B;
-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
-}
-    textarea {
-      background-color: #36343B;
-      border: 1px solid #999;
-      display: block;
-      padding: 10px;
-      width: 650px;
-      height: 350px;
-      color: #FFFFFF;
-      resize: none; 
-    } 
-    h2{
-      color:white
-    }
-    iframe{
-      resize: both;
-      overflow: auto;
-      width: 1100;
-      height: 900;
-    }
-    </style>
+<link rel="stylesheet" type="text/css" href="/Trust-Tools/assets/css/create_your_own.css">
 
-  <table width=100% height=100%>
-    <tr><td width=50%>
+  <div style="width:100%;"> 
+    <div style="float:left; width:50%;">
       <h2>Dockerfile.txt Template</h2>
       <textarea>From <Base Image>
   
@@ -66,10 +42,10 @@ CMD ./run.sh</textarea>
       <button id="btnSave2">Download</button>
       <br><br>
         <a href="/Trust-Tools/index" style="color:white">Go Back</a>
-        <script src="/Trust-Tools/assets/js/save_content_docker.js"></script>
-  </td><td width=50%>
-    <iframe src="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">
-    </iframe>
-  </td></tr></table>
-
-  
+    </div>
+    <div style="float:right; width:50%; padding-top:65px;">
+      <iframe src="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">
+      </iframe>
+    </div>
+    <script src="/Trust-Tools/assets/js/save_content_docker.js"></script>
+    </div>

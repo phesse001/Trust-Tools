@@ -1,72 +1,50 @@
-<style>
-    body{
-  background-color: #27262B;
-  font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
-  }
-    textarea {
-      background-color: #36343B;
-      border: 1px solid #999;
-      display: block;
-      padding: 10px;
-      width: 700px;
-      height: 350px;
-      color: #FFFFFF;
-      resize: none; 
-    } 
-    h2{
-      color:white
-    }
-    iframe{
-      resize: both;
-      overflow: auto;
-      width: 1100;
-      height: 900;
-    }
-    </style>
+<link rel="stylesheet" type="text/css" href="/Trust-Tools/assets/css/create_your_own.css">
 
-  <table width=100% height=100%>
-  <tr><td width=50%>
-    <h2>wf.yml Template</h2>
-    <textarea>steps:
-
-- uses: </Path/To/Container>
-  args: './Path/To/Script'
+  <div style="width:100%;"> 
+    <div style="float:left; width:50%;">
+      <h2>wf.yml Template</h2>
+      <textarea>steps:
+  
+  - uses: </Path/To/Container>
+    args: './Path/To/Script'
+                
+    or
               
-  or
-            
-- uses: </Path/To/Container>
-  runs: ['./Path/To/Script','<Argument>']</textarea>
-    <br>
-    <button id="btnSave1">Download</button>
-    <br><br>
-    <h2>March Madness Simulation wf.yml</h2>
-    <textarea># (0) Start of file
-steps:
-      
-# (1) Run March Madness Application
-- uses: './container'
-  runs: './scripts/madness.sh'
-      
-# (3) Create LaTeX Table with results
-- uses: docker://python:3
-  runs: ['./scripts/table.py','./scripts/correct.txt','./madness/output_no_advantage.txt', './madness/output_2_advantage.txt','./madness/output_4_advantage.txt','./docker_table.tex','12']
-      
-- uses: docker://python:3
-  runs: ['./scripts/table.py','./scripts/correct.txt','./madness/output_no_advantage.txt', './madness/output_2_advantage.txt','./madness/output_4_advantage.txt','./popper_table.tex','12']
-      
-# (4) Compile Latex files into pdf
-- uses: './container'
-  runs: './paper.sh'
-      
-# (5) Remove March Madness Application from host machine
-- uses: './container'
-  args: ['rm', '-r', 'madness']</textarea>
-    <br>
-    <button id="btnSave2">Download</button>
-    <br><br>
-    <a href="/Trust-Tools/index" style="color:white">Go Back</a>
-  <script src="/Trust-Tools/assets/js/save_content_popper.js"></script>
-  </td><td width=50%>
-    <iframe src="https://popper.readthedocs.io/en/latest/sections/cn_workflows.html">
-    </iframe>
-  </td></tr></table>
+  - uses: </Path/To/Container>
+    runs: ['./Path/To/Script','<Argument>']</textarea>
+      <br>
+      <button id="btnSave1">Download</button>
+      <br><br>
+      <h2>March Madness Simulation wf.yml</h2>
+      <textarea># (0) Start of file
+  steps:
+        
+  # (1) Run March Madness Application
+  - uses: './container'
+    runs: './scripts/madness.sh'
+        
+  # (3) Create LaTeX Table with results
+  - uses: docker://python:3
+    runs: ['./scripts/table.py','./scripts/correct.txt','./madness/output_no_advantage.txt', './madness/output_2_advantage.txt','./madness/output_4_advantage.txt','./docker_table.tex','12']
+        
+  - uses: docker://python:3
+    runs: ['./scripts/table.py','./scripts/correct.txt','./madness/output_no_advantage.txt', './madness/output_2_advantage.txt','./madness/output_4_advantage.txt','./popper_table.tex','12']
+        
+  # (4) Compile Latex files into pdf
+  - uses: './container'
+    runs: './paper.sh'
+        
+  # (5) Remove March Madness Application from host machine
+  - uses: './container'
+    args: ['rm', '-r', 'madness']</textarea>
+      <br>
+      <button id="btnSave2">Download</button>
+      <br><br>
+      <a href="/Trust-Tools/index" style="color:white">Go Back</a>
+    </div>
+    <div style="float:right; width:50%; padding-top:65px;">
+      <iframe src="https://popper.readthedocs.io/en/latest/sections/cn_workflows.html">
+      </iframe>
+    </div>
+    <script src="/Trust-Tools/assets/js/save_content_popper.js"></script>
+    </div>
